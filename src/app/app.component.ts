@@ -1,13 +1,19 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, Input } from '@angular/core';
+import { ModelEventLifeCycle } from './components/model-events-lifecycle';
+import { AppVM } from './app-vm';
+import { MainToolbarComponent } from './components/main-toolbar/main-toolbar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  imports: [MainToolbarComponent],
+  templateUrl: './app.component.html'
 })
-export class AppComponent {
-  title = 'injectable-toolbar';
+export class AppComponent extends ModelEventLifeCycle {
+  @Input() override model: AppVM;
+
+  constructor() {
+    super();
+    this.model = new AppVM();
+  }
 }
