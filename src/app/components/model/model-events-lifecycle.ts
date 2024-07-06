@@ -1,5 +1,5 @@
 import { Component, OnChanges, OnDestroy, Input, SimpleChanges } from "@angular/core";
-import { IEventListener } from "../events/i-event-listener";
+import { IEventListener } from "../../events/i-event-listener";
 
 @Component({ template: '' })
 export abstract class ModelEventLifeCycle implements OnChanges, OnDestroy {

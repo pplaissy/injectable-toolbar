@@ -1,0 +1,5 @@
+@if (model) {
+    <div class="flex justify-content-center py-4">
+        <p-chart [type]="model.chartType" [data]="model.basicData" [options]="model.basicOptions" width="40rem" height="40rem" />
+    </div>
+}

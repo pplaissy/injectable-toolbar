@@ -1,0 +1,14 @@
+@if (model) {
+    <div class="flex flex-column align-items-center w-full py-6 px-4">
+        <div [style]="{maxWidth: '50rem'}">
+            <h2>Component injection with MVVM events</h2>
+            <p>This application implements a way of injecting specific commands into a toolbar according to the context of the current view.</p>
+            <p>I'm using the MVVM event management library detailed in <a href="https://code-crumbs.pplaissy.fr/posts/mvvm-model-events/">this previous article</a>.</p>
+            <p>The main toolbar contains a menu of 3 pages, <strong>Home, Document, Charts</strong>.</p>
+            <p>When you display the <strong>Document page</strong>, justification commands are injected into the toolbar, which you can use to format the text.</p>
+            <p>When you display the <strong>Charts page</strong>, the commands injected into the toolbar offer different types of graph to render the datas.</p>
+            <p>Find full explanations <a href="https://code-crumbs.pplaissy.fr/posts/injectable-toolbar/">here</a>.</p>
+            <p>😁 Enjoy!</p>
+        </div>
+    </div>
+}

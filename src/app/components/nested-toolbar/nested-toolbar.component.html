@@ -1,0 +1,10 @@
+@if (model) {
+    @switch (model.type) {
+        @case (NestedToolbarType.document) {
+            <app-document-toolbar [model]="model"/>
+        }
+        @case (NestedToolbarType.charts) {
+            <app-charts-toolbar [model]="model"/>
+        }
+    }
+}

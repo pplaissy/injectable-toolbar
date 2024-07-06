@@ -1,19 +1,18 @@
 import { Component, Input } from '@angular/core';
-import { ModelEventLifeCycle } from './components/model-events-lifecycle';
 import { AppVM } from './app-vm';
 import { MainToolbarComponent } from './components/main-toolbar/main-toolbar.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [MainToolbarComponent],
+  imports: [RouterModule, MainToolbarComponent],
   templateUrl: './app.component.html'
 })
-export class AppComponent extends ModelEventLifeCycle {
-  @Input() override model: AppVM;
+export class AppComponent {
+  @Input() model: AppVM;
 
   constructor() {
-    super();
     this.model = new AppVM();
   }
 }

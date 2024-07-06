@@ -1,0 +1,11 @@
+@if (model) {
+    <p-selectButton 
+        [options]="model.chartOptions" 
+        [(ngModel)]="model.value" 
+        optionLabel="icon"
+        (onChange)="model.onOptionChange($event)">
+        <ng-template let-item pTemplate>
+            <i [class]="item.icon"></i>
+        </ng-template>
+    </p-selectButton>
+}
